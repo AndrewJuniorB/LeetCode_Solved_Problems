@@ -15,9 +15,9 @@ if (!root) return true;
     function mirror(a,b) {
         if (!a && !b) return true;
         
-        if (!a || !b || a.val !== b.val) return false;
+        if (!a || !b) return false;
         
-        return mirror(a.right, b.left) && mirror(a.left, b.right);
+        return a.val === b.val && mirror(a.right, b.left) && mirror(a.left, b.right);
     }
 return mirror(root.left, root.right);
 };
