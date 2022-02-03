@@ -9,7 +9,6 @@ var isPalindrome = function(s) {
     let regExp = /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/' ']/gi;
     
     let lettersOnly = s.replace(regExp, '').toLowerCase();
-    
 
     let reversedS = lettersOnly.split('').reverse().join('');
     
