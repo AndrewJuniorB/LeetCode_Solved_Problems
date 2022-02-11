@@ -3,7 +3,6 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-let sorted = nums.sort();
-    let result = sorted.filter((num) => sorted.indexOf(num) === sorted.lastIndexOf(num))
+    let result = nums.filter((num) => nums.indexOf(num) === nums.lastIndexOf(num))
    return result;
 };
