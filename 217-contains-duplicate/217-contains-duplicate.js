@@ -3,7 +3,13 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    
-    return !!(nums.filter((el,i) => nums.includes(el, i+1))).length;
-    
+    let obj = {};
+    for (let i = 0; i < nums.length; i ++) {
+        if (obj[nums[i]] === true) {
+            return true;
+        }
+        obj[nums[i]] = true;
+        
+    }
+    return false;
 };
